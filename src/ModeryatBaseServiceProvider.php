@@ -8,6 +8,9 @@ class ModeryatBaseServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        // Load routes
+        $this->loadRoutesFrom(__DIR__ . 'routes/web.php');
+
         // Publishing configuration files
         $this->publishes([
             __DIR__ . '../config/settings.php' => config_path('settings.php',)
