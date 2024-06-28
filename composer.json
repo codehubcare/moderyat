@@ -1,0 +1,42 @@
+{
+    "name": "codehubcare/moderyat",
+    "description": "Website builder",
+    "autoload": {
+        "psr-4": {
+            "Codehubcare\\Moderyat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shamshad Zaheer",
+            "email": "shamshadtech101@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^9.1"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "lint": [
+            "@php vendor/bin/phpstan analyse"
+        ]
+    }
+}
