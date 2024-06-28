@@ -42,7 +42,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "codehubcare\\Moderyat\\ModeryatBaseServiceProvider"
+        "Codehubcare\\Moderyat\\ModeryatBaseServiceProvider"
       ]
     }
   }
