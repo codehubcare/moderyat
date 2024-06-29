@@ -1,5 +1,5 @@
 {
-  "name": "Codehubcare/moderyat",
+  "name": "codehubcare/moderyat",
   "description": "Laravel Package",
   "autoload": {
     "psr-4": {
