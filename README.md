@@ -10,7 +10,7 @@ composer require codehubcare/moderyat
 
 ## How to use
 
-### Routs
+### Routes
 
 Visit: /admin
 
