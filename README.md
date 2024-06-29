@@ -4,7 +4,15 @@ Moderyat is a Laravel package, used as CMS to build business websites quickly. T
 
 ## How to install?
 
+```bash
+composer require codehubcare/moderyat
+```
+
 ## How to use
+
+### Routs
+
+Visit: /admin
 
 ## How to contribute
 
