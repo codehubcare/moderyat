@@ -1,6 +1,6 @@
 {
-  "name": "codehubcare/moderyat",
-  "description": "Website builder",
+  "name": "Codehubcare/moderyat",
+  "description": "Laravel Package",
   "autoload": {
     "psr-4": {
       "Codehubcare\\Moderyat\\": "src/"
@@ -9,7 +9,7 @@
   "authors": [
     {
       "name": "Shamshad Zaheer",
-      "email": "shamshadtech101@gmail.com"
+      "email": "shamshadzr@gmail.com"
     }
   ],
   "require-dev": {
