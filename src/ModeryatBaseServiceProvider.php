@@ -3,6 +3,7 @@
 namespace Codehubcare\Moderyat;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class ModeryatBaseServiceProvider extends ServiceProvider
 {
@@ -11,8 +12,14 @@ class ModeryatBaseServiceProvider extends ServiceProvider
         // Load routes
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 
+        // Autoloading package's components
+        Blade::componentNamespace('Codehubcare\\Views\\Components', 'moderyat');
+
         // Load views
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'moderyat');
+        $this->publishes([
+            __DIR__ . '/resources/views' => resource_path('views/vendor/moderyat'),
+        ]);
 
         // Publishing configuration files
         $this->publishes([
