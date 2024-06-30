@@ -11,6 +11,9 @@ class ModeryatBaseServiceProvider extends ServiceProvider
         // Load routes
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 
+        // Load views
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'moderyat');
+
         // Publishing configuration files
         $this->publishes([
             __DIR__ . '../config/settings.php' => config_path('settings.php',)

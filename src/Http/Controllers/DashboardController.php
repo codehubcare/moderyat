@@ -10,6 +10,7 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        return View('dashboard');
+
+        return View('moderyat::dashboard');
     }
 }

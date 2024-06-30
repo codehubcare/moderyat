@@ -45,5 +45,7 @@
         "Codehubcare\\Moderyat\\ModeryatBaseServiceProvider"
       ]
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": false
 }

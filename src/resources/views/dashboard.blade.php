@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('moderyat::layout.app')
 
 @section('content')
     <div>
