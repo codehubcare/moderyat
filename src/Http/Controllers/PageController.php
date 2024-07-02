@@ -14,4 +14,17 @@ class PageController extends Controller
 
         return view('moderyat::pages.index', compact('pages'));
     }
+
+    public function create()
+    {
+    }
+
+    public function store(Request $request)
+    {
+    }
+
+    public function edit(Page $page)
+    {
+        dd('no view file found');
+    }
 }
