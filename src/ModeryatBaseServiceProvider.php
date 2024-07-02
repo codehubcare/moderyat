@@ -25,13 +25,18 @@ class ModeryatBaseServiceProvider extends ServiceProvider
 
         // Publishing configuration files
         $this->publishes([
-            __DIR__ . '/../config/settings.php' => config_path('settings.php',)
+            __DIR__ . '/config/settings.php' => config_path('settings.php',)
         ], 'config');
 
         // Publishing assets folder
         $this->publishes([
             __DIR__ . '/public/assets' => public_path('vendor/moderyat'),
         ], 'public');
+
+        // Publishing migrations
+        $this->publishes([
+            __DIR__ . '/database/migrations/' => database_path('migrations')
+        ], 'migrations');
     }
 
     public function register()
