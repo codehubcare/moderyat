@@ -18,7 +18,7 @@ class ModeryatBaseServiceProvider extends ServiceProvider
         // Load views
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'moderyat');
 
-        // TODO: Uncomment this once we the package is stable
+        // TODO: Uncomment this once the package is stable
         // $this->publishes([
         //     __DIR__ . '/resources/views' => resource_path('views/vendor/moderyat'),
         // ]);
