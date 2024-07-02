@@ -10,6 +10,9 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -83,8 +86,6 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
 *,
 *::before,
