@@ -28,6 +28,22 @@ class Page extends Model
         return $this->is_published;
     }
 
+    // Relationships
+    public function parent()
+    {
+        return Page::whereId($this->parent_id)->find();
+    }
+
+    /**
+     * Retrieve the sub-pages of this page.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany The sub-pages of this page.
+     */
+    public function subPages()
+    {
+        return $this->hasMany(Page::class, 'parent_id', 'id');
+    }
+
     // Events
     protected static function boot()
     {
