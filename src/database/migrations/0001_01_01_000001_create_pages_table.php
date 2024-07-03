@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('slug');
             $table->string('parent_id')->default(0);
             $table->text('body')->nullable();
-            $table->integer('user_id')->default(1);
+            $table->unsignedBigInteger('user_id')->default(1);
+            $table->boolean('is_published')->default(false);
 
             // SEO fields
             $table->string('meta_title')->nullable();
@@ -29,6 +30,12 @@ return new class extends Migration
 
             // Etc
             $table->timestamps();
+
+            // Foreign Keys
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
