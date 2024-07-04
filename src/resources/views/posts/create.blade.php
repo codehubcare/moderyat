@@ -9,5 +9,6 @@
 
         @include('moderyat::posts.form')
         <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{{ route('posts.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 @endsection

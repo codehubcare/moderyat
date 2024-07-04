@@ -11,6 +11,7 @@
             @include('moderyat::posts.categories.form')
 
             <button type="submit" class="btn btn-primary">Save</button>
+            <a href="{{ route('post-categories.index') }}" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
 @endsection
