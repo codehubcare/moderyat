@@ -18,7 +18,7 @@
                      data-bs-parent="#sidenavAccordion">
                      <nav class="sb-sidenav-menu-nested nav">
                          <a class="nav-link" href="{{ route('posts.index') }}">All posts</a>
-                         <a class="nav-link" href="#">Categories</a>
+                         <a class="nav-link" href="{{ route('post-categories.index') }}">Categories</a>
                      </nav>
                  </div>
 

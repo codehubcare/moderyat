@@ -2,6 +2,7 @@
 
 use Codehubcare\Moderyat\Http\Controllers\DashboardController;
 use Codehubcare\Moderyat\Http\Controllers\PageController;
+use Codehubcare\Moderyat\Http\Controllers\PostCategoryController;
 use Codehubcare\Moderyat\Http\Controllers\PostController;
 use Codehubcare\Moderyat\Http\Controllers\UserController;
 use Codehubcare\Moderyat\Http\Controllers\ProfileController;
@@ -14,6 +15,7 @@ Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
     Route::resource('pages', PageController::class);
     Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
+    Route::resource('post-categories', PostCategoryController::class);
 
     // Profile
     Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');

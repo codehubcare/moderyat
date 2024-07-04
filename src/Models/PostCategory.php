@@ -36,6 +36,11 @@ class PostCategory extends Model
         return $this->hasMany(PostCategory::class, 'parent_id', 'id');
     }
 
+    public function hasSubCategories()
+    {
+        return $this->subCategories()->count() > 0;
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
