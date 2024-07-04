@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Codehubcare\Moderyat\Models\Setting;
 use Codehubcare\Moderyat\Http\Requests\SettingsStoreRequest;
 use App\Http\Controllers\Controller;
+use Codehubcare\Moderyat\Http\Requests\SettingUpdateRequest;
 
 class SettingsController extends Controller
 {
@@ -36,5 +37,25 @@ class SettingsController extends Controller
         return redirect()
             ->route('settings.index')
             ->with('success', 'New setting key has been added.');
+    }
+
+    public function edit(Setting $setting)
+    {
+        return view('moderyat::settings.edit', compact('setting'));
+    }
+
+    public function update(SettingUpdateRequest $request, Setting $setting)
+    {
+        $setting->update(
+            [
+                'key' => Str::snake($request->key),
+                'value' => $request->value,
+                'type' => $request->type,
+            ]
+        );
+
+        return redirect()
+            ->route('settings.index')
+            ->with('success', 'Setting key has been updated.');
     }
 }

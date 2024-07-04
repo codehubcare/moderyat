@@ -24,7 +24,9 @@
                 <tbody>
                     @foreach ($settings as $setting)
                         <tr>
-                            <td>{{ $setting['key'] }}</td>
+                            <td>
+                                <a href="{{ route('settings.edit', $setting['id']) }}">{{ $setting['key'] }}</a>
+                            </td>
                             <td>{{ $setting['value'] }}</td>
                             <td>{{ $setting['type'] }}</td>
                         </tr>
