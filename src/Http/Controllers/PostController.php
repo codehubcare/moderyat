@@ -77,7 +77,12 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('posts.index')->withSuccess('Post deleted.');
+
+        // TODO: Remove file or image if any
+
+        return redirect()
+            ->route('posts.index')
+            ->withSuccess('Post deleted.');
     }
 
     private function getPostCategories()
