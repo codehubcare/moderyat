@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Codehubcare\Moderyat\Http\Requests\PostStoreRequest;
+use Codehubcare\Moderyat\Http\Requests\PostUpdateRequest;
 use Codehubcare\Moderyat\Models\Post;
 use Codehubcare\Moderyat\Models\PostCategory;
 
@@ -23,7 +24,7 @@ class PostController extends Controller
     public function create()
     {
         $post = new Post();
-        $categories = PostCategory::published()->get();
+        $categories = $this->getPostCategories();
 
         return view('moderyat::posts.create', compact('post', 'categories'));
     }
@@ -51,17 +52,36 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
-        return view('moderyat::posts.edit', compact('post'));
+        $categories = $this->getPostCategories();
+
+        return view('moderyat::posts.edit', compact('post', 'categories'));
     }
 
-    public function update(Request $request, User $post)
+    public function update(PostUpdateRequest $request, Post $post)
     {
-        return redirect()->route('posts.index')->withSuccess('Post updated.');
+        $post->update(
+            [
+                'title' => $request->get('title'),
+                'slug' => Str::slug($request->get('title')),
+                'category_id' => $request->get('category_id'),
+                'content' => $request->get('content'),
+                'is_published' => $request->get('is_published'),
+            ]
+        );
+
+        return redirect()
+            ->route('posts.index')
+            ->withSuccess('Post updated.');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
         return redirect()->route('posts.index')->withSuccess('Post deleted.');
+    }
+
+    private function getPostCategories()
+    {
+        return PostCategory::published()->get();
     }
 }
