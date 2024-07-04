@@ -54,6 +54,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4 pt-4">
+                    @include('moderyat::layout.partials.alerts')
                     @yield('content')
                 </div>
             </main>

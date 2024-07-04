@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('parent_id')->default(0);
-            $table->text('body')->nullable();
+            $table->longText('content')->nullable();
             $table->unsignedBigInteger('user_id')->default(1);
             $table->boolean('is_published')->default(false);
 

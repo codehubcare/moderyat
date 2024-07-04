@@ -2,14 +2,16 @@
 
 @section('content')
     <div>
-        <h1>Pages</h1>
+        <header class="d-flex align-items-center justify-content-between">
+            <h1>Pages</h1>
+            <a href="{{ route('pages.create') }}" class="btn btn-primary">Create new page</a>
+        </header>
 
         <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +23,6 @@
                                 {{ $page['title'] }}
                             </a>
                         </td>
-                        <td></td>
                     </tr>
                 @endforeach
             </tbody>
