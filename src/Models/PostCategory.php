@@ -2,38 +2,22 @@
 
 namespace Codehubcare\Moderyat\Models;
 
-
 use App\Models\User;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Codehubcare\Moderyat\Traits\Publishable;
 
-class Page extends Model
+class PostCategory extends Model
 {
     use Publishable;
 
-    protected $table = 'pages';
+    protected $table = 'post_categories';
     protected $guarded = [];
-
     /**
      * Scope
      */
     public function scopeMain($query)
     {
         return $query->whereParentId(0);
-    }
-
-    public function scopePublished($query)
-    {
-        return $query->whereIsPublished(true);
-    }
-
-    /**
-     * Validations
-     */
-    public function isPublished()
-    {
-        return $this->is_published;
     }
 
     // Relationships
@@ -43,13 +27,13 @@ class Page extends Model
     }
 
     /**
-     * Retrieve the sub-pages of this page.
+     * Retrieve the sub-post-categories of this post category.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany The sub-pages of this page.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany 
      */
-    public function subPages()
+    public function subCategories()
     {
-        return $this->hasMany(Page::class, 'parent_id', 'id');
+        return $this->hasMany(PostCategory::class, 'parent_id', 'id');
     }
 
     public function user()

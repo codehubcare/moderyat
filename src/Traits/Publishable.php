@@ -34,4 +34,15 @@ trait Publishable
     {
         return $this->is_published ? 'Published' : 'Unpublished';
     }
+
+    // Scopes
+    public function scopePublished($query)
+    {
+        return $query->whereIsPublished(true);
+    }
+
+    public function scopeUnpublished($query)
+    {
+        return $query->whereIsPublished(false);
+    }
 }
