@@ -51,6 +51,17 @@ class PageController extends Controller
 
     public function update(PageUpdateRequest $request, Page $page)
     {
+
+        $page->update(
+            $request->validated()
+        );
+
         return redirect()->route('pages.index')->withSuccess('Page updated.');
+    }
+
+    public function destroy(Page $page)
+    {
+        $page->delete();
+        return redirect()->route('pages.index')->withSuccess('Page deleted.');
     }
 }

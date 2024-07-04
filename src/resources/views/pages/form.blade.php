@@ -7,14 +7,16 @@
     @enderror
 </div>
 
-<div class="mb-3">
-    <label for="slug">slug</label>
-    <input type="text" name="slug" id="slug" class="form-control" value="{{ old('slug', $page->slug) }}"
-        required>
-    @error('slug')
-        <p class="form-text text-danger">{{ $message }}</p>
-    @enderror
-</div>
+@if ($page->exists)
+    <div class="mb-3">
+        <label for="slug">slug</label>
+        <input type="text" name="slug" id="slug" class="form-control" value="{{ old('slug', $page->slug) }}"
+            required>
+        @error('slug')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+@endif
 
 <div class="mb-3">
     <label for="content">Content</label>

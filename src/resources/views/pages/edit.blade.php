@@ -19,4 +19,15 @@
 
         </form>
     </div>
+
+    <div class="mt-5">
+        <div class="alert alert-danger">
+            <form action="{{ route('pages.destroy', $page) }}" method="post">
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete page</button>
+            </form>
+        </div>
+    </div>
 @endsection

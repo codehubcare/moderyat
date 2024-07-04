@@ -53,9 +53,9 @@ class Page extends Model
         parent::boot();
 
         // Registering an "updated" event handler
-        static::updated(function () {
-            $this->slug = Str::slug($this->title);
-            $this->save();
+        static::updated(function ($page) {
+            $page->slug = Str::slug($page->title);
+            $page->save();
         });
     }
 }
