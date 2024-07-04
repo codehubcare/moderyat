@@ -7,6 +7,7 @@ use Codehubcare\Moderyat\Http\Controllers\PostCategoryController;
 use Codehubcare\Moderyat\Http\Controllers\PostController;
 use Codehubcare\Moderyat\Http\Controllers\UserController;
 use Codehubcare\Moderyat\Http\Controllers\ProfileController;
+use Codehubcare\Moderyat\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
@@ -25,4 +26,7 @@ Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
     // Change password
     Route::get('change-password', [PasswordController::class, 'index'])->name('change-password.index');
     Route::put('change-password', [PasswordController::class, 'update'])->name('change-password.update');
+
+    // Settings
+    Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
 });
