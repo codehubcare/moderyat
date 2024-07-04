@@ -31,6 +31,9 @@ return new class extends Migration
             // Etc
             $table->timestamps();
 
+            // Store JSON value for extra customization
+            $table->text('extra')->nullable();
+
             // Foreign Keys
             $table->foreign('user_id')
                 ->references('id')
