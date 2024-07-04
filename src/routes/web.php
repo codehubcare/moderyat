@@ -28,5 +28,5 @@ Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
     Route::put('change-password', [PasswordController::class, 'update'])->name('change-password.update');
 
     // Settings
-    Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::resource('settings', SettingsController::class);
 });
