@@ -53,7 +53,10 @@ class PageController extends Controller
     {
 
         $page->update(
-            $request->validated()
+            $request->validated() +
+                [
+                    'slug' => Str::slug($request['title'])
+                ]
         );
 
         return redirect()->route('pages.index')->withSuccess('Page updated.');

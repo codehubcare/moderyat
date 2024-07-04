@@ -10,11 +10,15 @@
 @if ($page->exists)
     <div class="mb-3">
         <label for="slug">slug</label>
-        <input type="text" name="slug" id="slug" class="form-control" value="{{ old('slug', $page->slug) }}"
-            required>
-        @error('slug')
-            <p class="form-text text-danger">{{ $message }}</p>
-        @enderror
+        <input type="text" class="form-control" value="{{ old('slug', $page->slug) }}" readonly disabled>
+    </div>
+
+    <div class="mb-3">
+        <label for="is_published">Status</label>
+        <select name="is_published" id="is_published" class="form-select">
+            <option value="1" @selected($page->isPublished())>Published</option>
+            <option value="0" @selected(!$page->isPublished())>Unpublished</option>
+        </select>
     </div>
 @endif
 

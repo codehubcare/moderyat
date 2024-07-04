@@ -12,6 +12,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                                 {{ $page['title'] }}
                             </a>
                         </td>
+                        <td>{{ $page['status'] }}</td>
                     </tr>
                 @endforeach
             </tbody>

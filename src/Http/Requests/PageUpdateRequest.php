@@ -24,6 +24,7 @@ class PageUpdateRequest extends FormRequest
         return [
             'title' => 'required',
             'content' => 'required',
+            'is_published' => 'nullable',
         ];
     }
 }

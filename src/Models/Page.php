@@ -4,9 +4,12 @@ namespace Codehubcare\Moderyat\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Codehubcare\Moderyat\Traits\Publishable;
 
 class Page extends Model
 {
+    use Publishable;
+
     protected $table = 'pages';
     protected $guarded = [];
 
@@ -45,17 +48,5 @@ class Page extends Model
     public function subPages()
     {
         return $this->hasMany(Page::class, 'parent_id', 'id');
-    }
-
-    // Events
-    protected static function boot()
-    {
-        parent::boot();
-
-        // Registering an "updated" event handler
-        static::updated(function ($page) {
-            $page->slug = Str::slug($page->title);
-            $page->save();
-        });
     }
 }
