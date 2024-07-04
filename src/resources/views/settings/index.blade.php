@@ -10,6 +10,10 @@
             </a>
         </header>
 
+        <section class="my-3">
+            <a href="#" class="btn btn-primary">Process settings</a>
+        </section>
+
         <main>
 
             <table class="table">

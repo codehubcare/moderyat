@@ -9,7 +9,7 @@
 
 
 <div class="mb-3">
-    <label for="value">value</label>
+    <label for="value">Value</label>
     <input type="text" name="value" id="value" class="form-control" value="{{ old('value', $setting->value) }}"
         required>
     @error('value')
