@@ -5,6 +5,7 @@ namespace Codehubcare\Moderyat\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Codehubcare\Moderyat\Http\Requests\UserUpdateRequest;
 
 class UserController extends Controller
 {
@@ -34,8 +35,10 @@ class UserController extends Controller
         return view('moderyat::users.edit', compact('user'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(UserUpdateRequest $request, User $user)
     {
+        $user->update($request->validated());
+
         return redirect()->route('users.index')->withSuccess('User updated.');
     }
 
