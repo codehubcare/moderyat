@@ -12,6 +12,7 @@
             @include('moderyat::settings.form')
 
             <button type="submit" class="btn btn-primary">Save</button>
+            <a href="{{ route('settings.index') }}" class="btn btn-secondary">Go back</a>
         </form>
 
     </section>
