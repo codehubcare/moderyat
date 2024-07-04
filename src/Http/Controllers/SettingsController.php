@@ -21,7 +21,9 @@ class SettingsController extends Controller
 
     public function create()
     {
-        return view('moderyat::settings.create');
+        $setting = new Setting();
+
+        return view('moderyat::settings.create', compact('setting'));
     }
 
     public function store(SettingsStoreRequest $request)
@@ -57,5 +59,14 @@ class SettingsController extends Controller
         return redirect()
             ->route('settings.index')
             ->with('success', 'Setting key has been updated.');
+    }
+
+    public function destroy(Setting $setting)
+    {
+        $setting->delete();
+
+        return redirect()
+            ->route('settings.index')
+            ->with('success', 'Setting key has been deleted.');
     }
 }
