@@ -3,6 +3,7 @@
 namespace Codehubcare\Moderyat\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 
 
@@ -21,7 +22,10 @@ class PasswordController extends Controller
     public function update(PasswordUpdateRequest $request)
     {
         $user = auth()->user();
-        // $user->update($request->validated());
+
+        $user->update([
+            'password' => Hash::make($request->get("new_password"))
+        ]);
 
         return redirect()->route('change-password.index')->withSuccess('Password changed.');
     }

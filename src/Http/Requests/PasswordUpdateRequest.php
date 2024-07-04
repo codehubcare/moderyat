@@ -2,6 +2,7 @@
 
 namespace Codehubcare\Moderyat\Http\Requests;
 
+use Codehubcare\Moderyat\Rules\CurrentPassword;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PasswordUpdateRequest extends FormRequest
@@ -22,8 +23,12 @@ class PasswordUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'current_password' =>  'required',
-            'new_password' =>  'required|min:6|confirmed',
+            'current_password' =>  ['required', new CurrentPassword],
+            'new_password' =>  [
+                'required',
+                'min:8',
+                'confirmed'
+            ],
         ];
     }
 }
