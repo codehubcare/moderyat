@@ -11,7 +11,10 @@
         </header>
 
         <section class="my-3">
-            <a href="#" class="btn btn-primary">Process settings</a>
+            <form action="{{ route('settings.process') }}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-primary">Process Settings</button>
+            </form>
         </section>
 
         <main>

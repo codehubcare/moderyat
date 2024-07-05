@@ -29,4 +29,5 @@ Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
 
     // Settings
     Route::resource('settings', SettingsController::class);
+    Route::post('process', [SettingsController::class, 'process'])->name('settings.process');
 });

@@ -1,15 +1,6 @@
-<?php
-
-return [
-    // Admin panel title
-    'app_title' => 'Moderyat',
-
-    // Address
-    'address' => '',
-
-    // Mobile Number
-    'mobile_number' => '',
-
-    // Email address
-    'email_address' => '',
-];
+<?php 
+ return array (
+  'address' => '2073 McLaughlin Ave, Apt 103',
+  'mobile_number' => '40822873322',
+  'email_address' => 'shamshadzr@gmail.com',
+);
