@@ -42,6 +42,25 @@
 </div>
 
 
+
+@if ($post->category->has_picture ?? true)
+    <div class="mb-3">
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image" class="form-control">
+        @error('image')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+
+    @if ($post->hasFileOf('image'))
+        <div class="my-3">
+            <img src="{{ $post->getFileUrlOf('image') }}" width="64px" alt="{{ $post->title }}">
+        </div>
+    @endif
+@endif
+
+
+
 <fieldset>
     <legend>SEO</legend>
 

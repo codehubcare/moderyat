@@ -1,7 +1,7 @@
 @extends('moderyat::layout.app')
 
 @section('content')
-    <form action="{{ route('posts.store') }}" method="post">
+    <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <header class="d-flex align-items-center justify-content-between">
             <h1>Add new post</h1>

@@ -31,7 +31,7 @@ class PostController extends Controller
 
     public function store(PostStoreRequest $request)
     {
-        Post::create(
+        $post = Post::create(
             [
                 'title' => $request->get('title'),
                 'slug' => Str::slug($request->get('title')),
@@ -44,6 +44,8 @@ class PostController extends Controller
                 'meta_keywords' => $request->get('meta_keywords'),
             ]
         );
+
+        $this->handleFileUploadFor($post);
 
         return redirect()->route('posts.index')->withSuccess('New post added.');
     }
@@ -75,6 +77,8 @@ class PostController extends Controller
             ]
         );
 
+        $this->handleFileUploadFor($post);
+
         return redirect()
             ->route('posts.index')
             ->withSuccess('Post updated.');
@@ -94,5 +98,16 @@ class PostController extends Controller
     private function getPostCategories()
     {
         return PostCategory::published()->get();
+    }
+
+    private function handleFileUploadFor($post)
+    {
+        if (request()->hasFile('image')) {
+            $post->uploadFile('image', 'images');
+        }
+
+        if (request()->hasFile('file')) {
+            $post->uploadFile('file', 'files');
+        }
     }
 }

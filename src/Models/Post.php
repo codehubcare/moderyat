@@ -3,12 +3,14 @@
 namespace Codehubcare\Moderyat\Models;
 
 use App\Models\User;
+use Codehubcare\Moderyat\Traits\Fileable;
 use Codehubcare\Moderyat\Traits\Publishable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
     use Publishable;
+    use Fileable;
 
     protected $table = 'posts';
 
