@@ -31,7 +31,6 @@
                     <li><a class="dropdown-item" href="{{ route('profile.index') }}">Profile</a></li>
                     <li><a class="dropdown-item" href="{{ route('change-password.index') }}">Change Password</a></li>
                     <li><a class="dropdown-item" href="{{ route('settings.index') }}">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
