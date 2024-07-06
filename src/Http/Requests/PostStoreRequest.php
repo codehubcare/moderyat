@@ -26,6 +26,9 @@ class PostStoreRequest extends FormRequest
             'category_id' => 'required',
             'content' => 'required',
             'is_published' => 'required',
+            'meta_title' => 'nullable|max:100',
+            'meta_description' => 'nullable|max:300',
+            'meta_keywords' => 'nullable|max:300',
         ];
     }
 }

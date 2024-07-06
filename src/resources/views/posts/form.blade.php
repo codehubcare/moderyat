@@ -40,3 +40,34 @@
         <p class="form-text text-danger">{{ $message }}</p>
     @enderror
 </div>
+
+
+<fieldset>
+    <legend>SEO</legend>
+
+    <div class="mb-3">
+        <label for="meta_title">Meta Title</label>
+        <input type="text" name="meta_title" id="meta_title" class="form-control"
+            value="{{ old('meta_title', $post->meta_title) }}">
+        @error('meta_title')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+
+    <div class="mb-3">
+        <label for="meta_description">Meta Description</label>
+        <textarea name="meta_description" id="meta_description" class="form-control">{{ old('meta_description', $post->meta_description) }}</textarea>
+        @error('meta_description')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+
+    <div class="mb-3">
+        <label for="meta_keywords">Meta Keywords</label>
+        <textarea name="meta_keywords" id="meta_keywords" class="form-control" placeholder="Comma separated">{{ old('meta_keywords', $post->meta_keywords) }}</textarea>
+        <p class="form-text">No more than 10 keywords.</p>
+        @error('meta_keywords')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+</fieldset>

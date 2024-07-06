@@ -83,6 +83,8 @@ class SettingsController extends Controller
         $configFilePath = __DIR__ . "/../../config/settings.php";
         File::put($configFilePath, "<?php \n return " . $configFileData . ";");
 
+        // TODO: Run publishing config file command (with flag)
+
         return redirect()
             ->route('settings.index')
             ->with('success', 'Settings have been saved to the config file.');

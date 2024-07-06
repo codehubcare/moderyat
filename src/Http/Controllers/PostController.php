@@ -39,6 +39,9 @@ class PostController extends Controller
                 'content' => $request->get('content'),
                 'is_published' => $request->get('is_published'),
                 'user_id' => auth()->user()->id,
+                'meta_title' => $request->get('meta_title'),
+                'meta_description' => $request->get('meta_description'),
+                'meta_keywords' => $request->get('meta_keywords'),
             ]
         );
 
@@ -66,6 +69,9 @@ class PostController extends Controller
                 'category_id' => $request->get('category_id'),
                 'content' => $request->get('content'),
                 'is_published' => $request->get('is_published'),
+                'meta_title' => $request->get('meta_title'),
+                'meta_description' => $request->get('meta_description'),
+                'meta_keywords' => $request->get('meta_keywords'),
             ]
         );
 
