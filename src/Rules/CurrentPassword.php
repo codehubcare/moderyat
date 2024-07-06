@@ -4,8 +4,8 @@ namespace Codehubcare\Moderyat\Rules;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class CurrentPassword implements ValidationRule
 {
@@ -16,7 +16,7 @@ class CurrentPassword implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if (!Hash::check($value, Auth::user()->password)) {
+        if (! Hash::check($value, Auth::user()->password)) {
             $fail('Your current password is incorrect.');
         }
     }

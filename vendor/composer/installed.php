@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'd3004f70c61ef7c96ea3a9115d91eb630fddf274',
         'name' => 'codehubcare/moderyat',
         'dev' => true,
     ),
@@ -29,12 +29,12 @@
             'dev_requirement' => true,
         ),
         'codehubcare/moderyat' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'd3004f70c61ef7c96ea3a9115d91eb630fddf274',
             'dev_requirement' => false,
         ),
         'composer/semver' => array(
@@ -395,6 +395,17 @@
             'install_path' => __DIR__ . '/../laravel/framework',
             'aliases' => array(),
             'reference' => '92deaa4f037ff100e36809443811301819a8cf84',
+            'dev_requirement' => true,
+        ),
+        'laravel/pint' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../laravel/pint',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '2b61d89e15d0771824a842d4593315f203c6b2ce',
             'dev_requirement' => true,
         ),
         'laravel/prompts' => array(
@@ -802,8 +813,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => true,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(

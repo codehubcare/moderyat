@@ -13,7 +13,8 @@
     }
   ],
   "require-dev": {
-    "orchestra/testbench": "^9.1"
+    "orchestra/testbench": "^9.1",
+    "laravel/pint": "dev-main"
   },
   "autoload-dev": {
     "psr-4": {

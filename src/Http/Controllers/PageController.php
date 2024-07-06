@@ -2,13 +2,12 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Codehubcare\Moderyat\Models\Page;
-use Illuminate\Support\Str;
-
 use Codehubcare\Moderyat\Http\Requests\PageStoreRequest;
 use Codehubcare\Moderyat\Http\Requests\PageUpdateRequest;
+use Codehubcare\Moderyat\Models\Page;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
@@ -32,7 +31,7 @@ class PageController extends Controller
             $request->validated() +
                 [
                     'slug' => Str::slug($request['title']),
-                    'user_id' => auth()->user()->id
+                    'user_id' => auth()->user()->id,
                 ]
         );
 
@@ -55,7 +54,7 @@ class PageController extends Controller
         $page->update(
             $request->validated() +
                 [
-                    'slug' => Str::slug($request['title'])
+                    'slug' => Str::slug($request['title']),
                 ]
         );
 
@@ -65,6 +64,7 @@ class PageController extends Controller
     public function destroy(Page $page)
     {
         $page->delete();
+
         return redirect()->route('pages.index')->withSuccess('Page deleted.');
     }
 }

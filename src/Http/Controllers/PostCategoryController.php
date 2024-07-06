@@ -2,12 +2,12 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Codehubcare\Moderyat\Http\Requests\PostCategoryStoreRequest;
 use Codehubcare\Moderyat\Http\Requests\PostCategoryUpdateRequest;
 use Codehubcare\Moderyat\Models\PostCategory;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostCategoryController extends Controller
 {
@@ -35,7 +35,7 @@ class PostCategoryController extends Controller
                 +
                 [
                     'slug' => Str::slug($request->title),
-                    'user_id' => $request->user()->id
+                    'user_id' => $request->user()->id,
                 ]
         );
 

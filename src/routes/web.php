@@ -5,9 +5,9 @@ use Codehubcare\Moderyat\Http\Controllers\PageController;
 use Codehubcare\Moderyat\Http\Controllers\PasswordController;
 use Codehubcare\Moderyat\Http\Controllers\PostCategoryController;
 use Codehubcare\Moderyat\Http\Controllers\PostController;
-use Codehubcare\Moderyat\Http\Controllers\UserController;
 use Codehubcare\Moderyat\Http\Controllers\ProfileController;
 use Codehubcare\Moderyat\Http\Controllers\SettingsController;
+use Codehubcare\Moderyat\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {

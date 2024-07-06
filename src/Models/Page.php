@@ -2,17 +2,16 @@
 
 namespace Codehubcare\Moderyat\Models;
 
-
 use App\Models\User;
-use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Model;
 use Codehubcare\Moderyat\Traits\Publishable;
+use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
     use Publishable;
 
     protected $table = 'pages';
+
     protected $guarded = [];
 
     /**

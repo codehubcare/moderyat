@@ -2,13 +2,13 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Codehubcare\Moderyat\Http\Requests\PostStoreRequest;
 use Codehubcare\Moderyat\Http\Requests\PostUpdateRequest;
 use Codehubcare\Moderyat\Models\Post;
 use Codehubcare\Moderyat\Models\PostCategory;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {

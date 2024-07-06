@@ -23,7 +23,7 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'email' => 'required|email|unique:users,email,' . auth()->user()->id,
+            'email' => 'required|email|unique:users,email,'.auth()->user()->id,
         ];
     }
 }

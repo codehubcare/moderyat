@@ -2,17 +2,15 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Codehubcare\Moderyat\Http\Requests\SettingsStoreRequest;
+use Codehubcare\Moderyat\Http\Requests\SettingUpdateRequest;
+use Codehubcare\Moderyat\Models\Setting;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Codehubcare\Moderyat\Models\Setting;
-use Codehubcare\Moderyat\Http\Requests\SettingsStoreRequest;
-use App\Http\Controllers\Controller;
-use Codehubcare\Moderyat\Http\Requests\SettingUpdateRequest;
 
 class SettingsController extends Controller
 {
-
     public function index()
     {
         $settings = Setting::all();
@@ -80,8 +78,8 @@ class SettingsController extends Controller
         $array = $settings->toArray();
         $configFileData = var_export($array, true);
 
-        $configFilePath = __DIR__ . "/../../config/settings.php";
-        File::put($configFilePath, "<?php \n return " . $configFileData . ";");
+        $configFilePath = __DIR__.'/../../config/settings.php';
+        File::put($configFilePath, "<?php \n return ".$configFileData.';');
 
         // TODO: Run publishing config file command (with flag)
 

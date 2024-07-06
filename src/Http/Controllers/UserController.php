@@ -2,10 +2,10 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Codehubcare\Moderyat\Http\Requests\UserUpdateRequest;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -16,9 +16,7 @@ class UserController extends Controller
         return view('moderyat::users.index', compact('users'));
     }
 
-    public function create()
-    {
-    }
+    public function create() {}
 
     public function store(Request $request)
     {
@@ -50,6 +48,7 @@ class UserController extends Controller
         }
 
         $user->delete();
+
         return redirect()->route('users.index')->withSuccess('User deleted.');
     }
 }

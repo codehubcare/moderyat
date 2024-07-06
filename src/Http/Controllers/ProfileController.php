@@ -2,12 +2,9 @@
 
 namespace Codehubcare\Moderyat\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-
 use Codehubcare\Moderyat\Http\Requests\ProfileUpdateRequest;
-
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
