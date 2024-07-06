@@ -88,7 +88,8 @@ class PostController extends Controller
     {
         $post->delete();
 
-        // TODO: Remove file or image if any
+        $post->deleteFileOf('image');
+        $post->deleteFileOf('file');
 
         return redirect()
             ->route('posts.index')
