@@ -3,11 +3,13 @@
 namespace Codehubcare\Moderyat\Models;
 
 use App\Models\User;
+use Codehubcare\Moderyat\Traits\Fileable;
 use Codehubcare\Moderyat\Traits\Publishable;
 use Illuminate\Database\Eloquent\Model;
 
 class PostCategory extends Model
 {
+    use Fileable;
     use Publishable;
 
     protected $table = 'post_categories';

@@ -59,6 +59,22 @@
     @endif
 @endif
 
+@if ($post->category->has_file ?? true)
+    <div class="mb-3">
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" class="form-control">
+        @error('file')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+
+    @if ($post->hasFileOf('file'))
+        <div class="my-3">
+            <a href="{{ $post->getFileUrlOf('file') }}" target="_blank">{{ $post->title }}</a>
+        </div>
+    @endif
+@endif
+
 
 
 <fieldset>

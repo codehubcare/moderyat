@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <form action="{{ route('post-categories.store') }}" method="post">
+        <form action="{{ route('post-categories.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <header class="d-flex align-items-center justify-content-between">
                 <h1>Add new post category</h1>

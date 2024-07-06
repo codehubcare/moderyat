@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <form action="{{ route('post-categories.update', $postCategory) }}" method="post">
+        <form action="{{ route('post-categories.update', $postCategory) }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

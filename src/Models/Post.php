@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use Publishable;
     use Fileable;
+    use Publishable;
 
     protected $table = 'posts';
 
