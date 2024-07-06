@@ -38,7 +38,7 @@ php artisan migrate
 http://127.0.0.1:8000/moderyat
 ```
 
-## Formate styles
+## Code Style
 
 We're are using Laravel pint. To run code format run the following command:
 
