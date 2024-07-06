@@ -22,6 +22,12 @@ composer require laravel/ui
 composer require codehubcare/moderyat
 ```
 
+4. Run migrations
+
+```
+php artisan migrate
+```
+
 ## How to use
 
 1. Register a user account
@@ -32,6 +38,10 @@ composer require codehubcare/moderyat
 http://127.0.0.1:8000/moderyat
 ```
 
-## How to contribute
+## Formate styles
 
-[TODO]
+We're are using Laravel pint. To run code format run the following command:
+
+```
+./vendor/bin/pint
+```
