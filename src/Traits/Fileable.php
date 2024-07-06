@@ -37,7 +37,7 @@ trait Fileable
 
     public function getFileUrlOf($fieldName)
     {
-        return url('storage/'.$this[$fieldName]);
+        return url('storage/' . $this[$fieldName]);
     }
 
     public function isFileExistsOf($fieldName)

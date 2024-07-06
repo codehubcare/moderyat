@@ -1,6 +1,7 @@
 <?php
 
 use Codehubcare\Moderyat\Http\Controllers\DashboardController;
+use Codehubcare\Moderyat\Http\Controllers\FileController;
 use Codehubcare\Moderyat\Http\Controllers\PageController;
 use Codehubcare\Moderyat\Http\Controllers\PasswordController;
 use Codehubcare\Moderyat\Http\Controllers\PostCategoryController;
@@ -18,6 +19,7 @@ Route::prefix('moderyat')->middleware(['web', 'auth'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
     Route::resource('post-categories', PostCategoryController::class);
+    Route::resource('files', FileController::class);
 
     // Profile
     Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
