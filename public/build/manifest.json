@@ -1,0 +1,13 @@
+{
+  "src/resources/js/app.js": {
+    "file": "assets/app-gidPpw4b.js",
+    "name": "app",
+    "src": "src/resources/js/app.js",
+    "isEntry": true
+  },
+  "src/resources/sass/app.scss": {
+    "file": "assets/app-CAg0JlTy.css",
+    "src": "src/resources/sass/app.scss",
+    "isEntry": true
+  }
+}

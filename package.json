@@ -1,32 +1,13 @@
 {
-  "name": "moderyat",
-  "version": "1.0.0",
-  "description": "Moderyat is a Laravel package, used as CMS to build business websites quickly. This package serve as Admin panel and provides database schema to hold contents of pages, posts and etc.",
-  "main": "vite.config.js",
-  "directories": {
-    "test": "tests"
-  },
-  "dependencies": {
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "laravel-vite-plugin": "^1.0.4",
-    "quill": "^2.0.2",
-    "vite": "^5.3.3"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codehubcare/moderyat.git"
-  },
-  "keywords": [
-    "moderyat"
-  ],
-  "author": "Shamshad Zaheer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codehubcare/moderyat/issues"
-  },
-  "homepage": "https://github.com/codehubcare/moderyat#readme"
+    "laravel-vite-plugin": "^1.0",
+    "sass": "^1.77.6",
+    "vite": "^5.0"
+  }
 }
