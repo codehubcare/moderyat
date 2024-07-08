@@ -8,9 +8,7 @@
     <meta name="description" content="Admin panel built by Codehub Care" />
     <meta name="author" content="codehubcare.com" />
     <title>@yield('page-title', 'Admin panel')</title>
-    <link href="{{ asset('vendor/moderyat/css/styles.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('vendor/moderyat/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/moderyat/app2.css') }}">
     <script src="{{ asset('vendor/moderyat/app.js') }}"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
