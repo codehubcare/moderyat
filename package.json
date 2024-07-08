@@ -8,5 +8,8 @@
   "devDependencies": {
     "sass": "^1.77.6",
     "vite": "^5.0"
+  },
+  "dependencies": {
+    "quill": "^2.0.2"
   }
 }

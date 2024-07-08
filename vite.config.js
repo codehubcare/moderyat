@@ -6,7 +6,7 @@ export default defineConfig({
       input: ["src/resources/js/app.js", "src/resources/sass/app.scss"],
       output: {
         assetFileNames: "[name][extname]",
-        dir: "src/public/moderyat/",
+        dir: "src/public/",
         entryFileNames: "[name].js"
       }
     },
