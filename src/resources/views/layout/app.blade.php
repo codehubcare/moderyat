@@ -9,7 +9,6 @@
     <meta name="author" content="codehubcare.com" />
     <title>@yield('page-title', 'Admin panel')</title>
     <link rel="stylesheet" href="{{ asset('vendor/moderyat/app.css') }}">
-    <script src="{{ asset('vendor/moderyat/app.js') }}"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -65,8 +64,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
-    <script src="{{ asset('vendor/moderyat/js/scripts.js') }}"></script>
-
+    <script src="{{ asset('vendor/moderyat/app.js') }}"></script>
 </body>
 
 </html>
