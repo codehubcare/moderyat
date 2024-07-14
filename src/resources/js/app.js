@@ -1,5 +1,8 @@
-// import Quill from "quill";
-// const quill = new Quill("textarea");
+import tinymce from "tinymce";
+
+tinymce.init({
+  selector: "text-editor"
+});
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // Toggle the side navigation
