@@ -1,6 +1,6 @@
 {
   "name": "codehubcare/moderyat",
-  "description": "Laravel Package",
+  "description": "This is laravel package for custom content management system.",
   "autoload": {
     "psr-4": {
       "Codehubcare\\Moderyat\\": "src/"
@@ -43,7 +43,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Codehubcare\\Moderyat\\ModeryatBaseServiceProvider"
+        "Codehubcare\\Moderyat\\ModeryatServiceProvider"
       ]
     }
   },
