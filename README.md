@@ -4,25 +4,39 @@ Moderyat is a Laravel package, used as CMS to build business websites quickly. T
 
 ## How to install?
 
-1. Create new Laravel app
+Create new Laravel project:
 
 ```bash
-Laravel new business-website
+composer create-project laravel/laravel [project-name]
 ```
 
-2. Install Laravel/ui package
+Set up Mysql Database, by changing .env file:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=8889
+DB_DATABASE=[database-name]
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+Install Laravel/ui package
 
 ```bash
 composer require laravel/ui
+php artisan ui bootstrap --auth
 ```
 
-3. Install Moderyat package
+Install Moderyat package
 
 ```bash
 composer require codehubcare/moderyat
+php artisan vendor:publish
+// select -> Provider: Codehubcare\Moderyat\ModeryatServiceProvider
 ```
 
-4. Run migrations
+Run migrations
 
 ```
 php artisan migrate
