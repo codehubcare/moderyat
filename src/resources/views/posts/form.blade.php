@@ -91,7 +91,7 @@
 
     <div class="mb-3">
         <label for="meta_description">Meta Description</label>
-        <textarea name="meta_description" id="meta_description" class="form-control">{{ old('meta_description', $post->meta_description) }}</textarea>
+        <textarea name="meta_description" id="meta_description" class="form-control text-editor">{{ old('meta_description', $post->meta_description) }}</textarea>
         @error('meta_description')
             <p class="form-text text-danger">{{ $message }}</p>
         @enderror

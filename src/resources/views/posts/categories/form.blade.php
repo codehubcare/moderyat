@@ -9,7 +9,7 @@
 
 <div class="mb-3">
     <label for="content">Content</label>
-    <textarea name="content" id="content" class="form-control">
+    <textarea name="content" id="content" class="form-control text-editor">
         {{ old('content', $postCategory->content) }}
     </textarea>
     @error('content')

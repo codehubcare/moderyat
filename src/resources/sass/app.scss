@@ -1,2 +1,13 @@
 @import "theme";
 @import "tinymce";
+
+:root {
+  --primary-fg-color: #222;
+}
+
+table {
+  a {
+    text-decoration: none;
+    color: var(--primary-fg-color);
+  }
+}
