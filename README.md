@@ -62,15 +62,7 @@ Register a new user and navigate to the Moderyat admin panel:
 http://127.0.0.1:8000/moderyat
 ```
 
-## How to use
-
-1. Register a user account
-2. Login to your newly created account.
-3. Visit to the following url:
-
-```
-http://127.0.0.1:8000/moderyat
-```
+<img src="moderyat-screenshot.png"/>
 
 ## Code Style
 
