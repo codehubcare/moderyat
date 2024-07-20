@@ -42,6 +42,26 @@ Run migrations
 php artisan migrate
 ```
 
+Install node modules
+
+```bash
+npm install
+npm run build
+
+```
+
+Serve the application
+
+```bash
+php artisan serve
+```
+
+Register a new user and navigate to the Moderyat admin panel:
+
+```
+http://127.0.0.1:8000/moderyat
+```
+
 ## How to use
 
 1. Register a user account
