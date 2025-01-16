@@ -78,13 +78,13 @@ class SettingsController extends Controller
         $array = $settings->toArray();
         $configFileData = var_export($array, true);
 
-        $configFilePath = __DIR__.'/../../config/settings.php';
+        $configFilePath = config_path('settings.php');
         File::put($configFilePath, "<?php \n return ".$configFileData.';');
 
         // TODO: Run publishing config file command (with flag)
 
         return redirect()
             ->route('settings.index')
-            ->with('success', 'Settings have been saved to the config file.');
+            ->with('success', 'Settings have been saved.');
     }
 }
