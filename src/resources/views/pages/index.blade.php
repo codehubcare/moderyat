@@ -34,11 +34,13 @@
                         </td>
                         <td>
                             @if ($page->isPublished())
-                                <i class="fas fa-check text-success"></i>
-                               <span class="text-sm text-success"> {{ $page['status'] }}</span>
+                                <span class="border badge badge-pill text-success">
+                                    <i class="fas fa-check text-success"></i>
+                                    {{ $page['status'] }}
+                                </span>
                             @else
-                                <i class="fas fa-times text-danger"></i>
-                                <span class="text-sm text-danger">
+                                <span class="border badge badge-pill text-danger">
+                                    <i class="fas fa-times"></i>
                                     {{ $page['status'] }}
                                 </span>
                             @endif
@@ -48,7 +50,7 @@
             </tbody>
         </table>
 
-        <div class="mt-3"> 
+        <div class="mt-3">
             {{ $pages->links() }}
         </div>
     </div>
