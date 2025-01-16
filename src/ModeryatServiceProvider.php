@@ -19,7 +19,7 @@ class ModeryatServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'moderyat');
 
         $this->publishes([
-            __DIR__ . '/resources/views' => resource_path('views/vendor/moderyat'),
+            __DIR__.'/resources/views' => resource_path('views/vendor/moderyat'),
         ]);
 
         // Publishing configuration files
