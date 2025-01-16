@@ -13,7 +13,7 @@
         <table class="table border">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th width="50px">ID</th>
                     <th>Title</th>
                     <th>Status</th>
                 </tr>
