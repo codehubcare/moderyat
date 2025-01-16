@@ -7,7 +7,7 @@
             <a href="{{ route('files.create') }}" class="btn btn-primary">Upload File</a>
         </header>
 
-        <table class="table">
+        <table class="table border">
             <thead>
                 <tr>
                     <th>ID</th>

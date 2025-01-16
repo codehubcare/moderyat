@@ -13,7 +13,7 @@ class PageController extends Controller
 {
     public function index(Request $request)
     {
-        $pages = Page::main()->latest()->get();
+        $pages = Page::main()->latest()->simplePaginate();
 
         return view('moderyat::pages.index', compact('pages'));
     }

@@ -1,7 +1,11 @@
-import tinymce from "tinymce";
+import tinymce from 'tinymce';
 
+
+/**
+ * Init TinyMCE
+ */
 tinymce.init({
-  selector: ".text-editor"
+  selector: ".text-editor",
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {

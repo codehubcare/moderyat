@@ -1,13 +1,29 @@
-@import "theme";
-@import "tinymce";
+@use "theme";
+@use "tinymce";
 
 :root {
   --primary-fg-color: #222;
 }
+
 
 table {
   a {
     text-decoration: none;
     color: var(--primary-fg-color);
   }
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+form {
+  label {
+    font-size: 0.9rem;
+    color: #6f6464;
+  }
+}
+
+.border {
+  border-radius: 16px;
 }

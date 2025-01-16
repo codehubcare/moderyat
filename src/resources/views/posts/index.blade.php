@@ -2,21 +2,24 @@
 
 @section('content')
     <div>
-        <header class="d-flex align-items-center justify-content-between">
+        <header class="mb-3 d-flex align-items-center justify-content-between">
             <h1>Posts</h1>
-            <a href="{{ route('posts.create') }}" class="btn btn-primary">Add new post</a>
+            <a href="{{ route('posts.create') }}" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Add new post
+            </a>
         </header>
 
         <main>
             @if ($posts->isEmpty())
-                <div class="alert alert-info">
+                <div class="mt-3 alert alert-info">
                     No posts found.
                 </div>
             @else
-                <table class="table">
+                <table class="table border">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th width="50">ID</th>
                             <th>Title</th>
                             <th>Category</th>
                             <th>Status</th>
