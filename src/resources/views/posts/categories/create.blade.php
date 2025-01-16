@@ -10,8 +10,10 @@
 
             @include('moderyat::posts.categories.form')
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route('post-categories.index') }}" class="btn btn-secondary">Cancel</a>
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a href="{{ route('post-categories.index') }}" class="btn btn-secondary">Cancel</a>
+            </div>
         </form>
     </div>
 @endsection
