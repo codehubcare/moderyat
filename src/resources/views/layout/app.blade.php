@@ -29,14 +29,29 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{ route('profile.index') }}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{{ route('change-password.index') }}">Change Password</a></li>
-                    <li><a class="dropdown-item" href="{{ route('settings.index') }}">Settings</a></li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('profile.index') }}">
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('change-password.index') }}">
+                            Change Password
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('settings.index') }}">
+                            Settings
+                        </a>
+                    </li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#"
-                            onclick="document.getElementById('form-logout').submit()">Logout</a>
+                    <li>
+                        <a class="dropdown-item" href="#"
+                            onclick="document.getElementById('form-logout').submit()">
+                            Logout
+                        </a>
                     </li>
                     <form id="form-logout" action="{{ route('logout') }}" method="post">
                         @csrf

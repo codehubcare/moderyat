@@ -29,6 +29,12 @@ class ModeryatServiceProvider extends ServiceProvider
         ], 'config');
 
         // Publishing assets folder
+
+        // remove vendor/moderyat
+        if (is_dir(__DIR__ . '/public/vendor/moderyat')) {
+            rmdir(__DIR__ . '/public/vendor/moderyat');
+        }
+
         $this->publishes([
             __DIR__ . '/public/' => public_path('vendor/moderyat'),
             __DIR__ . '/../node_modules/tinymce/models/' => public_path('vendor/moderyat/models'),
