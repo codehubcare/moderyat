@@ -1,25 +1,27 @@
-<div class="mb-3">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $post->title) }}"
-        required>
-    @error('title')
-        <p class="form-text text-danger">{{ $message }}</p>
-    @enderror
-</div>
-
-<div class="mb-3">
-    <label for="category_id">Category</label>
-    <select name="category_id" id="category_id" class="form-control" required>
-        <option value="">Select category</option>
-        @foreach ($categories as $category)
-            <option value="{{ $category->id }}" @selected(old('category_id', $post->category_id) == $category->id)>
-                {{ $category->title }}
-            </option>
-        @endforeach
-    </select>
-    @error('category_id')
-        <p class="form-text text-danger">{{ $message }}</p>
-    @enderror
+<div class="row">
+    <div class="mb-3 col">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $post->title) }}"
+            required>
+        @error('title')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
+    
+    <div class="mb-3 col">
+        <label for="category_id">Category</label>
+        <select name="category_id" id="category_id" class="form-control" required>
+            <option value="">Select category</option>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}" @selected(old('category_id', $post->category_id) == $category->id)>
+                    {{ $category->title }}
+                </option>
+            @endforeach
+        </select>
+        @error('category_id')
+            <p class="form-text text-danger">{{ $message }}</p>
+        @enderror
+    </div>
 </div>
 
 <div class="mb-3">

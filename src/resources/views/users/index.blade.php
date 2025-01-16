@@ -6,7 +6,7 @@
             <h1>Users</h1>
         </header>
 
-        <table class="table">
+        <table class="table border">
             <thead>
                 <tr>
                     <th>ID</th>

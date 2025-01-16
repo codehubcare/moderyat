@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <header class="d-flex align-items-center justify-content-between">
+        <header class="mb-3 d-flex align-items-center justify-content-between">
             <h1>Posts</h1>
             <a href="{{ route('posts.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus"></i>
@@ -16,10 +16,10 @@
                     No posts found.
                 </div>
             @else
-                <table class="table">
+                <table class="table border">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th width="50">ID</th>
                             <th>Title</th>
                             <th>Category</th>
                             <th>Status</th>
