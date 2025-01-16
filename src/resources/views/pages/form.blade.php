@@ -24,7 +24,7 @@
 
 <div class="mb-3">
     <label for="content">Content</label>
-    <textarea name="content" id="content" class="form-control text-editor" required>{{ old('content', $page->content) }}</textarea>
+    <textarea name="content" id="content" class="form-control text-editor">{{ old('content', $page->content) }}</textarea>
     @error('content')
         <p class="form-text text-danger">{{ $message }}</p>
     @enderror
