@@ -1,7 +1,8 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
+    watch: '/src/resources',
     rollupOptions: {
       input: ["src/resources/js/app.js", "src/resources/sass/app.scss"],
       output: {
@@ -11,5 +12,5 @@ export default defineConfig({
       }
     },
     manifest: false
-  }
+  },
 });

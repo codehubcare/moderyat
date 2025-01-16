@@ -1,5 +1,5 @@
-@import "theme";
-@import "tinymce";
+@use "theme";
+@use "tinymce";
 
 :root {
   --primary-fg-color: #222;
@@ -15,4 +15,11 @@ table {
 
 h1 {
   font-size: 1.5rem;
+}
+
+form {
+  label {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
 }
