@@ -9,25 +9,36 @@ class ModeryatServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // Load routes
+        /**
+         * Load routes
+         */
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
 
-        // Autoload package's components
+        /**
+         * Load components
+         */
         Blade::componentNamespace('Codehubcare\\Views\\Components', 'moderyat');
 
-        // Load views
+        /**
+         * Load views
+         */
         $this->loadViewsFrom(__DIR__.'/resources/views', 'moderyat');
 
         $this->publishes([
             __DIR__.'/resources/views' => resource_path('views/vendor/moderyat'),
         ]);
 
-        // Publishing configuration files
+        /**
+         * Publishing config
+         */
         $this->publishes([
             __DIR__.'/config/settings.php' => config_path('settings.php'),
         ], 'config');
 
-        // Publishing assets folder
+        /**
+         * Publishing assets
+         */
+
         // Remove old assets
         if (is_dir(__DIR__.'/public/vendor/moderyat')) {
             rmdir(__DIR__.'/public/vendor/moderyat');
@@ -43,12 +54,16 @@ class ModeryatServiceProvider extends ServiceProvider
 
         ], 'public');
 
-        // Publish migrations
+        /**
+         * Publishing migrations
+         */
         $this->publishes([
             __DIR__.'/database/migrations/' => database_path('migrations'),
         ], 'migrations');
 
-        // Publish models
+        /**
+         * Publishing models
+         */
         $this->publishes([
             __DIR__.'/Models' => app_path('Models'),
         ]);
