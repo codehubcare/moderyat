@@ -1,7 +1,7 @@
 @extends('moderyat::layout.app')
 
 @section('content')
-    <div>
+    <div >
         <form action="{{ route('pages.store') }}" method="post">
             @csrf
             <header class="d-flex align-items-center justify-content-between">

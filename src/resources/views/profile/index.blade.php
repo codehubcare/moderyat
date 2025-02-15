@@ -1,7 +1,7 @@
 @extends('moderyat::layout.app')
 
 @section('content')
-    <div>
+    <div style="max-width: 500px;">
         <header class="d-flex align-items-center justify-content-between">
             <h1>Profile</h1>
         </header>
@@ -30,6 +30,7 @@
 
             <div>
                 <button type="submit" class="btn btn-primary">Save</button>
+                <a href="{{ route('dashboard') }}" class="btn btn-secondary">Cancel</a>
             </div>
 
         </form>

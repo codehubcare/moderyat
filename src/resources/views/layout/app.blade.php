@@ -16,12 +16,14 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="text-center navbar-brand ps-3" href="{{ route('dashboard') }}">
-            <img src="{{ asset('vendor/moderyat/images/logo.svg') }}" alt="Moderyat" class="me-2" style="height: 30px;">
+        <a class="navbar-brand ps-3" href="{{ route('dashboard') }}">
+            <img src="{{ asset('vendor/moderyat/images/logo.svg') }}" alt="Moderyat" class="me-2" style="height: 20px;">
         </a>
         <!-- Sidebar Toggle-->
-        <button class="order-1 btn btn-link btn-sm order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+        <button class="order-1 btn btn-link btn-sm order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i>
+        </button>
+            
         <!-- Navbar-->
         <ul class="mx-auto navbar-nav me-0">
             <li class="nav-item dropdown">

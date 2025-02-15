@@ -1,7 +1,7 @@
 @extends('moderyat::layout.app')
 
 @section('content')
-    <section>
+    <section style="max-width: 500px;">
         <header class="d-flex align-items-center justify-content-between">
             <h1>Update User</h1>
         </header>
