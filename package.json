@@ -10,6 +10,7 @@
     "vite": "^5.0"
   },
   "dependencies": {
+    "@toast-ui/editor": "^3.2.2",
     "tinymce": "^7.2.1"
   }
 }
