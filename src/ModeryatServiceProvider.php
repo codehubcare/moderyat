@@ -28,8 +28,7 @@ class ModeryatServiceProvider extends ServiceProvider
         ], 'config');
 
         // Publishing assets folder
-
-        // remove vendor/moderyat
+        // Remove old assets
         if (is_dir(__DIR__.'/public/vendor/moderyat')) {
             rmdir(__DIR__.'/public/vendor/moderyat');
         }
