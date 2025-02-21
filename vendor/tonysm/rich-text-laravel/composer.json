@@ -1,0 +1,82 @@
+{
+    "name": "tonysm/rich-text-laravel",
+    "description": "Integrates Trix content with Laravel",
+    "keywords": [
+        "laravel",
+        "rich-text-laravel"
+    ],
+    "homepage": "https://github.com/tonysm/rich-text-laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tony Messias",
+            "email": "tonysm@hey.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^10.0|^11.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "tonysm/globalid-laravel": "^1.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "livewire/livewire": "^3.4",
+        "nunomaduro/collision": "^6.0|^8.0",
+        "orchestra/testbench": "^8.21|^9.0",
+        "orchestra/workbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.5",
+        "symfony/html-sanitizer": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tonysm\\RichTextLaravel\\": "src",
+            "Tonysm\\RichTextLaravel\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tonysm\\RichTextLaravel\\Tests\\": "tests",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        },
+        "files": [
+            "workbench/helpers.php"
+        ]
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "lint": [
+            "@php vendor/bin/pint",
+            "@php vendor/bin/phpstan analyse"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tonysm\\RichTextLaravel\\RichTextLaravelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

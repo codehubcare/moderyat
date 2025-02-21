@@ -6,6 +6,9 @@ import tinymce from 'tinymce';
  */
 tinymce.init({
   selector: ".text-editor",
+  plugins: 'lists',
+  toolbar: 'numlist bullist'
+  
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {

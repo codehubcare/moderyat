@@ -32,8 +32,7 @@ Install Moderyat package
 
 ```bash
 composer require codehubcare/moderyat
-php artisan vendor:publish
-// select -> Provider: Codehubcare\Moderyat\ModeryatServiceProvider
+php artisan vendor:publish --provider="Codehubcare\Moderyat\ModeryatServiceProvider"
 ```
 
 Run migrations
