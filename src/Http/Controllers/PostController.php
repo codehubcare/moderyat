@@ -16,9 +16,18 @@ class PostController extends Controller
     {
         $posts = Post::with('category')
             ->latest()
-            ->simplePaginate();
+            ->when(request('search'), function($query) {
+                return $query->where('title', 'like', '%' . request('search') . '%');
+            })
+            ->when(request('category_id'), function($query) {
+                return $query->where('category_id', request('category_id'));
+            })
+            ->simplePaginate()
+            ->appends(request()->all());
 
-        return view('moderyat::posts.index', compact('posts'));
+        $categories = PostCategory::get();
+
+        return view('moderyat::posts.index', compact('posts', 'categories'));
     }
 
     public function create()

@@ -6,8 +6,8 @@ import tinymce from 'tinymce';
  */
 tinymce.init({
   selector: ".text-editor",
-  plugins: 'lists',
-  toolbar: 'numlist bullist'
+  plugins: 'lists image code',
+  toolbar: 'undo redo | styles | bold italic  | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | image | code',
   
 });
 
